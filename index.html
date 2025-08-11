@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Melonpanu | Links</title>
+    <meta name="description" content="All of Melonpanu's social links in one place." />
+    <meta name="theme-color" content="#0b0f14" />
+
+    <meta property="og:title" content="Melonpanu | Links" />
+    <meta property="og:description" content="Find me on TikTok, YouTube, and Discord." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <!-- Simple inline SVG favicon -->
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%230b0f14"/><text x="50" y="58" font-size="56" text-anchor="middle" fill="%23a3e635" font-family="Segoe UI, Roboto, Arial, sans-serif">🍉</text></svg>'
+    />
+  </head>
+  <body>
+    <main class="container">
+      <header class="profile">
+        <div class="avatar" aria-hidden="true">🍉</div>
+        <h1 class="title">Melonpanu</h1>
+        <p class="tagline">Creator • Streams • Clips</p>
+      </header>
+
+      <section class="links" aria-label="Social links">
+        <a class="link tiktok" href="https://www.tiktok.com/@melonpanu" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <span class="link-text">TikTok</span>
+          <span class="link-emoji" aria-hidden="true">🎵</span>
+        </a>
+
+        <a class="link youtube" href="https://www.youtube.com/@Melonpanu" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <span class="link-text">YouTube</span>
+          <span class="link-emoji" aria-hidden="true">▶️</span>
+        </a>
+
+        <a class="link discord" href="https://discord.gg/melonpanu" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <span class="link-text">Discord</span>
+          <span class="link-emoji" aria-hidden="true">💬</span>
+        </a>
+      </section>
+
+      <footer class="footer">
+        <small>© <span id="year"></span> Melonpanu</small>
+      </footer>
+    </main>
+
+    <script>
+      // Set current year without layout shift
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
