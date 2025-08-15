@@ -3,56 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Melonpanu | Links</title>
-    <meta name="description" content="All of Melonpanu's social links in one place." />
-    <meta name="theme-color" content="#0b0f14" />
-
-    <meta property="og:title" content="Melonpanu | Links" />
-    <meta property="og:description" content="Find me on TikTok, YouTube, and Discord." />
-    <meta property="og:type" content="website" />
+    <title>Melonpanu · Socials</title>
+    <meta name="description" content="All of Melonpanu's socials in one place: TikTok, YouTube, Discord." />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0e13" />
+    <meta name="format-detection" content="telephone=no" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
-    <!-- Simple inline SVG favicon -->
-    <link
-      rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="16" fill="%230b0f14"/><text x="50" y="58" font-size="56" text-anchor="middle" fill="%23a3e635" font-family="Segoe UI, Roboto, Arial, sans-serif">🍉</text></svg>'
-    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="container">
-      <header class="profile">
-        <div class="avatar" aria-hidden="true">🍉</div>
+      <header class="header">
+        <div class="avatar" aria-hidden="true">M</div>
         <h1 class="title">Melonpanu</h1>
-        <p class="tagline">Creator • Streams • Clips</p>
+        <p class="subtitle">Find me around the web</p>
       </header>
 
-      <section class="links" aria-label="Social links">
-        <a class="link tiktok" href="https://www.tiktok.com/@melonpanu" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <span class="link-text">TikTok</span>
-          <span class="link-emoji" aria-hidden="true">🎵</span>
+      <nav class="links" aria-label="Social links">
+        <a class="social-link tiktok" href="https://www.tiktok.com/@melonpanu" target="_blank" rel="noopener noreferrer me" title="TikTok: @melonpanu">
+          <span class="badge" aria-hidden="true">TT</span>
+          <span class="text">
+            <span class="name">TikTok</span>
+            <span class="handle">@melonpanu</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
         </a>
 
-        <a class="link youtube" href="https://www.youtube.com/@Melonpanu" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <span class="link-text">YouTube</span>
-          <span class="link-emoji" aria-hidden="true">▶️</span>
+        <a class="social-link youtube" href="https://www.youtube.com/@Melonpanu" target="_blank" rel="noopener noreferrer me" title="YouTube: @Melonpanu">
+          <span class="badge" aria-hidden="true">YT</span>
+          <span class="text">
+            <span class="name">YouTube</span>
+            <span class="handle">@Melonpanu</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
         </a>
 
-        <a class="link discord" href="https://discord.gg/melonpanu" target="_blank" rel="noopener noreferrer" aria-label="Discord">
-          <span class="link-text">Discord</span>
-          <span class="link-emoji" aria-hidden="true">💬</span>
+        <a class="social-link discord" href="https://discord.gg/melonpanu" target="_blank" rel="noopener noreferrer" title="Discord: Join the server">
+          <span class="badge" aria-hidden="true">DS</span>
+          <span class="text">
+            <span class="name">Discord</span>
+            <span class="handle">Join the server</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
         </a>
-      </section>
+
+        <a class="social-link patreon" href="https://www.patreon.com/melonpanu" target="_blank" rel="noopener noreferrer me" title="Patreon: Support melonpanu">
+          <span class="badge" aria-hidden="true">PT</span>
+          <span class="text">
+            <span class="name">Patreon</span>
+            <span class="handle">Support melonpanu</span>
+          </span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
 
       <footer class="footer">
-        <small>© <span id="year"></span> Melonpanu</small>
+        <p>© <span id="year"></span> Melonpanu</p>
       </footer>
     </main>
 
     <script>
-      // Set current year without layout shift
+      // Set current year
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>

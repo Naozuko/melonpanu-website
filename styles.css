@@ -1,0 +1,217 @@
+:root {
+  --bg: #0b0e13;
+  --bg-elev: #0f1218;
+  --text: #e6e9ef;
+  --muted: #a4acb9;
+  --link: #7cc7ff;
+  --ring: #3a86ff33;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  --tiktok: #ee1d52;
+  --youtube: #ff0033;
+  --discord: #5865f2;
+  --patreon: #ff6b6b;
+
+  --space-1: clamp(8px, 1.5vw, 12px);
+  --space-2: clamp(12px, 2vw, 16px);
+  --space-3: clamp(16px, 3vw, 24px);
+  --space-4: clamp(20px, 4vw, 32px);
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #0b0e13; /* stay dark; user requested dark mode */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 80% -10%, #172032, transparent 60%),
+              radial-gradient(900px 600px at -10% 110%, #1a2233, transparent 60%),
+              var(--bg);
+  color: var(--text);
+  letter-spacing: 0.2px;
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  max-width: min(820px, 100%);
+  margin: 0 auto;
+  padding: var(--space-4) max(20px, env(safe-area-inset-left)) var(--space-4) max(20px, env(safe-area-inset-right));
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.avatar {
+  width: clamp(68px, 10vw, 92px);
+  height: clamp(68px, 10vw, 92px);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: clamp(24px, 3.2vw, 34px);
+  color: var(--text);
+  background: linear-gradient(135deg, #111722, #0f141f 40%, #0b0f18);
+  border: 1px solid #1f2736;
+  box-shadow: inset 0 0 0 1px #0d121b, var(--shadow);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(14px, 2.2vw, 16px);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: linear-gradient(180deg, var(--bg-elev), #0a0d13);
+  border: 1px solid #1a2230;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transition: transform 120ms ease, border-color 120ms ease, background 200ms ease;
+  width: 100%;
+  max-width: min(560px, 92vw);
+  height: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .social-link:hover {
+    transform: translateY(-1px);
+    border-color: #2b364a;
+    background: linear-gradient(180deg, #111726, #0a0d13);
+  }
+}
+
+.social-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.badge {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  border: 1px solid #1a2230;
+}
+
+.tiktok .badge {
+  background: radial-gradient(60% 80% at 30% 20%, #101824, transparent), #141b27;
+  color: var(--tiktok);
+}
+
+.youtube .badge {
+  background: radial-gradient(60% 80% at 30% 20%, #1a1320, transparent), #1a1216;
+  color: var(--youtube);
+}
+
+.discord .badge {
+  background: radial-gradient(60% 80% at 30% 20%, #10152b, transparent), #13192a;
+  color: var(--discord);
+}
+
+.patreon .badge {
+  background: radial-gradient(60% 80% at 30% 20%, #1a1216, transparent), #1a1216;
+  color: var(--patreon);
+}
+
+.text {
+  display: grid;
+}
+
+.name {
+  font-weight: 700;
+  font-size: clamp(14px, 2.2vw, 16px);
+}
+
+.handle {
+  color: var(--muted);
+  font-size: clamp(11px, 2vw, 13px);
+}
+
+.arrow {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 520px) {
+  .social-link {
+    grid-template-columns: 36px 1fr auto;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .badge {
+    width: 36px;
+    height: 36px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .handle {
+    font-size: 12px;
+  }
+  .arrow {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .social-link:hover {
+    transform: none !important;
+  }
+}
+
+
+
