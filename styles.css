@@ -11,6 +11,8 @@
   --youtube: #ff0033;
   --discord: #5865f2;
   --patreon: #ff6b6b;
+  --twitch: #9146ff;
+  --kick: #53fc18;
 
   --space-1: clamp(8px, 1.5vw, 12px);
   --space-2: clamp(12px, 2vw, 16px);
@@ -154,6 +156,16 @@ body {
 .patreon .badge {
   background: radial-gradient(60% 80% at 30% 20%, #1a1216, transparent), #1a1216;
   color: var(--patreon);
+}
+
+.twitch .badge {
+  background: radial-gradient(60% 80% at 30% 20%, #1a1220, transparent), #1a1220;
+  color: var(--twitch);
+}
+
+.kick .badge {
+  background: radial-gradient(60% 80% at 30% 20%, #0a1a0a, transparent), #0a1a0a;
+  color: var(--kick);
 }
 
 .text {
